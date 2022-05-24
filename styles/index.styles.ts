@@ -12,6 +12,7 @@ export const Image = styled.img<{
   height?: number;
   width?: number;
 }>`
+  max-width: 80vw;
   ${(props) => (!props.height ? null : `height: ${props.height}px`)}
   ${(props) => (!props.width ? null : `width: ${props.width}px`)}
 `;

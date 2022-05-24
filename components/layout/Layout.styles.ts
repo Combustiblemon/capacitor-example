@@ -32,10 +32,11 @@ export const MenuItem = styled.button`
 
 export const Overlay = styled.div`
   position: absolute;
+  overflow: hidden;
   top: 0;
-  left: 100%;
-  width: 100%;
-  /* min-width: 87vw; */
+  left: 102%;
+  width: 100vw;
+  max-width: 85vw;
   height: 100vh;
   background-color: rgba(182, 184, 182, 0.4);
 `;
@@ -49,7 +50,7 @@ export const OpenMenu = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
-  overflow: auto;
+  overflow: scroll;
 `;
