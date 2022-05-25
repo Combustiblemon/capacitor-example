@@ -1,15 +1,8 @@
-import { App } from "@capacitor/app";
 import type { NextPage } from "next";
-import { useEffect } from "react";
 import Layout from "../components/layout/Layout";
-import { Wrapper, Image, Paragraph } from "../styles/index.styles";
+import { Paragraph } from "../styles/index.styles";
 
 const Lorem: NextPage = () => {
-  useEffect(() => {
-    App.addListener("backButton", (event) => {
-      window.history.back();
-    });
-  }, []);
   return (
     <Layout>
       <Paragraph>

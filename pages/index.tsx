@@ -10,10 +10,14 @@ import {
   Button,
   ImageWrapper,
 } from "../styles/index.styles";
-import { Capacitor } from "@capacitor/core";
 
 const fireNotification = () => {
+  // We can fire notifications from the app using the local-notification
+  // plugin. https://capacitorjs.com/docs/apis/local-notifications
   LocalNotifications.schedule({
+    // Our notification need to be in an array of type
+    // LocalNotificationSchema
+    // https://capacitorjs.com/docs/apis/local-notifications#localnotificationschema
     notifications: [
       { title: "test", body: "Hello i am a test notification :D", id: 0 },
     ],
@@ -22,9 +26,16 @@ const fireNotification = () => {
 
 const Home: NextPage = () => {
   useEffect(() => {
+    // By adding a listener to the backButton we remove its default
+    // behaviour of closing the app.
     App.addListener("backButton", (event) => {
-      if (event.canGoBack) return;
-      App.exitApp();
+      // This condition checks if there is a page to route back to.
+      // If there is not, the app closes.
+      if (event.canGoBack) {
+        window.history.back();
+      } else {
+        App.exitApp();
+      }
     });
   }, []);
 
@@ -34,6 +45,10 @@ const Home: NextPage = () => {
         <Image src="/img/favicon.ico" alt="icon" width={30} height={30} />
         <Text>Hello! This is a sample app using capacitor and next.js!</Text>
         <Button onClick={() => fireNotification()}>Notification</Button>
+        <br />
+        <br />
+        <br />
+        <br />
         <ImageWrapper>
           <Text>{"Here's"} a pretty puppy</Text>
           <Image

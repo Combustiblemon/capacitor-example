@@ -16,7 +16,6 @@ export const Sidebar = styled.div`
   border-right: 1px solid black;
   height: 100vh;
   width: 15%;
-  max-width: 55px;
 `;
 
 export const MenuItem = styled.button`
@@ -32,11 +31,11 @@ export const MenuItem = styled.button`
 
 export const Overlay = styled.div`
   position: absolute;
-  overflow: hidden;
+  overflow: clip;
   top: 0;
-  left: 102%;
-  width: 100vw;
-  max-width: 85vw;
+  left: 100%;
+  width: 86vw;
+  margin-left: 2px;
   height: 100vh;
   background-color: rgba(182, 184, 182, 0.4);
 `;
@@ -50,7 +49,8 @@ export const OpenMenu = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 100%;
+  width: 100%;
   height: 100vh;
   overflow: scroll;
+  margin: 2px;
 `;

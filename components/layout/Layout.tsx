@@ -25,6 +25,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
               <MenuItem onClick={() => router.push("/lorem")}>
                 Lorem Ipsum
               </MenuItem>
+              <MenuItem onClick={() => router.push("/storage")}>
+                Storage
+              </MenuItem>
             </OpenMenu>
           </Overlay>
         )}
