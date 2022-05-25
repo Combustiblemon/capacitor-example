@@ -47,6 +47,7 @@ const Home: NextPage = () => {
         <Button onClick={() => fireNotification()}>Notification</Button>
         <br />
         <br />
+        <a href="https://www.google.com">Google</a>
         <br />
         <br />
         <ImageWrapper>
