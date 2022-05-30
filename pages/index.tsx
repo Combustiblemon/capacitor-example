@@ -46,6 +46,8 @@ const Home: NextPage = () => {
         <Text>Hello! This is a sample app using capacitor and next.js!</Text>
         <Button onClick={() => fireNotification()}>Notification</Button>
         <br />
+        <Button onClick={() => confirm("hello")}>Confirm</Button>
+        <br />
         <br />
         <a href="https://www.google.com">Google</a>
         <br />
